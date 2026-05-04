@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- ✅ SEO -->
+<title>About Webber | Web Developer Arman | Affordable Websites India</title>
+<meta name="description" content="Meet Arman, founder of Webber. We build affordable websites for gyms and small businesses to help them get more clients online.">
+<meta name="keywords" content="web developer India, gym website developer, affordable website India, Webber Arman">
+<meta name="author" content="Webber">
+
+<!-- Open Graph -->
+<meta property="og:title" content="About Webber | Founder Arman">
+<meta property="og:description" content="Affordable websites for small businesses starting ₹1499.">
+<meta property="og:type" content="website">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+.luxury { font-family: 'Playfair Display', serif; }
+
+.gold {
+  background: linear-gradient(90deg,#D4AF37,#FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fade { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+
+<body class="bg-black text-white flex flex-col items-center justify-center min-h-screen px-6 text-center">
+
+<!-- Logo -->
+<img src="IMG_20260503_134348_926.webp" class="h-24 mb-6 fade" alt="Webber Logo">
+
+<!-- Heading -->
+<h1 class="luxury text-4xl gold mb-6 fade">About Founder</h1>
+
+<!-- Intro -->
+<h2 class="text-2xl mb-4 fade">Hi, I'm Arman</h2>
+
+<p class="text-gray-400 max-w-xl mb-6 fade">
+I build affordable, high-converting websites for gyms and small businesses to help them get more clients online.
+</p>
+
+<p class="text-gray-500 max-w-xl mb-6 fade">
+I started Webber with a simple goal — to make websites accessible for every business, even with a small budget.
+Most businesses lose customers because they don’t have an online presence. My focus is to solve that problem with simple and effective websites.
+</p>
+
+<!-- Trust Points -->
+<div class="text-gray-300 space-y-2 mb-8 fade">
+  <p>✔ Affordable pricing starting ₹1499</p>
+  <p>✔ Fast delivery (2–3 days)</p>
+  <p>✔ Mobile-friendly design</p>
+  <p>✔ Focus on getting clients</p>
+</div>
+
+<!-- CTA -->
+<a href="https://instagram.com/webber.we" target="_blank"
+class="bg-white text-black px-6 py-3 rounded-full fade">
+DM on Instagram
+</a>
+
+<!-- Script -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+  </html>
