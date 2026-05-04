@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webber</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+.luxury { font-family: 'Playfair Display', serif; }
+
+.gold {
+  background: linear-gradient(90deg,#D4AF37,#FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fade { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
+
+.glow:hover {
+  box-shadow: 0 0 20px rgba(212,175,55,0.3);
+}
+</style>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAV -->
+<div class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-black/70 backdrop-blur z-50">
+  <div class="flex items-center gap-2">
+    <img src="logo.png" class="h-8">
+    <span class="tracking-[4px] text-sm">WEBBER</span>
+  </div>
+
+  <a href="https://instagram.com/webber.we" target="_blank"
+  class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
+  DM
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-6 fade">
+  <img src="logo.png" class="h-20 mb-6">
+
+  <h1 class="text-5xl md:text-6xl luxury mb-4">
+    Websites That <span class="gold">Print Money</span>
+  </h1>
+
+  <p class="text-gray-400 max-w-xl mb-6">
+    We build high-converting, luxury websites for businesses that want more leads and more clients.
+  </p>
+
+  <a href="https://instagram.com/webber.we" target="_blank"
+  class="bg-white text-black px-6 py-3 rounded-full glow transition">
+  DM on Instagram
+  </a>
+
+  <p class="text-xs text-gray-500 mt-4">⚡ Only 3 slots left this week</p>
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 px-6 text-center border-t border-gray-800 fade">
+  <h2 class="text-3xl luxury mb-4">Why Webber?</h2>
+  <p class="text-gray-400 max-w-2xl mx-auto">
+    Most websites look good. Ours sell. We combine clean design with proven psychology to turn visitors into paying clients.
+  </p>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="py-20 px-6 border-t border-gray-800 fade">
+  <h2 class="text-3xl text-center luxury mb-10">Recent Work</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+    <div class="border p-6 rounded-xl hover:border-yellow-500 transition">
+      <h3 class="mb-2">Gym Website</h3>
+      <p class="text-gray-400 text-sm">+42% increase in leads</p>
+    </div>
+
+    <div class="border p-6 rounded-xl hover:border-yellow-500 transition">
+      <h3 class="mb-2">Salon Booking</h3>
+      <p class="text-gray-400 text-sm">Automated booking system</p>
+    </div>
+
+    <div class="border p-6 rounded-xl hover:border-yellow-500 transition">
+      <h3 class="mb-2">Creator Portfolio</h3>
+      <p class="text-gray-400 text-sm">Luxury personal branding</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="py-20 px-6 border-t border-gray-800 text-center fade">
+  <h2 class="text-3xl luxury mb-10">Pricing</h2>
+
+  <div class="max-w-md mx-auto border p-8 rounded-xl glow">
+    <h3 class="text-xl mb-2">Starter Website</h3>
+    <p class="text-4xl gold mb-4">₹1499</p>
+    <p class="text-gray-400 mb-6">Perfect for small businesses</p>
+
+    <a href="https://instagram.com/webber.we" target="_blank"
+    class="bg-white text-black px-6 py-3 rounded-full">
+    Get Started
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 px-6 border-t border-gray-800 fade">
+  <h2 class="text-3xl text-center luxury mb-10">Results</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-sm">
+
+    <div class="border p-6 rounded-xl">
+      “Got clients in first week itself.”
+      <div class="mt-4 text-gray-500">— Rahul</div>
+    </div>
+
+    <div class="border p-6 rounded-xl">
+      “Looks premium and smooth.”
+      <div class="mt-4 text-gray-500">— Priya</div>
+    </div>
+
+    <div class="border p-6 rounded-xl">
+      “Best investment for my business.”
+      <div class="mt-4 text-gray-500">— Aman</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-20 text-center border-t border-gray-800 fade">
+  <h2 class="text-3xl luxury mb-4">Ready to Grow?</h2>
+
+  <a href="https://instagram.com/webber.we" target="_blank"
+  class="bg-white text-black px-8 py-3 rounded-full glow">
+  DM Now
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 text-center text-gray-600 text-sm border-t border-gray-800">
+  © 2026 Webber
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
