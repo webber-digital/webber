@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Webber Services | Pricing & Website Design</title>
+<meta name="description" content="Affordable services by Webber. Personal branding, website design and full business websites with animation and lead generation.">
+
+<link rel="icon" href="https://webber-we.vercel.app/favicon.png?v=7">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+.luxury { font-family: 'Playfair Display', serif; }
+
+.gold {
+  background: linear-gradient(90deg,#D4AF37,#FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ANIMATION */
+.fade { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: #FFD700;
+  box-shadow: 0 0 25px rgba(255,215,0,0.2);
+}
+
+/* BUTTON */
+.btn:hover {
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAV -->
+<div class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-black/70 backdrop-blur z-50">
+  <div class="flex items-center gap-2">
+    <img src="IMG_20260503_134348_926.webp" class="h-8" alt="Webber Logo">
+    <span class="tracking-[4px] text-sm">WEBBER</span>
+  </div>
+
+  <a href="index.html"
+  class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
+  Home
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-6 fade">
+  <img src="IMG_20260503_134348_926.webp" class="h-24 mb-6" alt="Webber Logo">
+
+  <h1 class="text-5xl md:text-6xl luxury mb-4">
+    Our <span class="gold">Services</span>
+  </h1>
+
+  <p class="text-gray-400 max-w-xl">
+    Choose the perfect service to grow your personal brand or business online.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="py-24 px-6 border-t border-gray-800">
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- 1. PERSONAL BRANDING -->
+    <div class="card border p-8 rounded-2xl text-center fade">
+      <h2 class="text-xl mb-2">Personal Branding</h2>
+      <p class="text-4xl gold mb-4">₹599</p>
+
+      <p class="text-gray-400 mb-6">
+        Perfect for creators who want a strong profile look.
+      </p>
+
+      <ul class="text-gray-300 space-y-2 mb-6 text-sm">
+        <li>✔ Instagram DP Design</li>
+        <li>✔ Banner Design</li>
+        <li>✔ Clean Aesthetic Look</li>
+      </ul>
+
+      <a href="https://instagram.com/webber.we" target="_blank"
+      class="btn bg-white text-black px-6 py-3 rounded-full inline-block">
+      Get Started
+      </a>
+    </div>
+
+    <!-- 2. WEBSITE START -->
+    <div class="card border p-8 rounded-2xl text-center fade">
+      <h2 class="text-xl mb-2">Website Starter</h2>
+      <p class="text-4xl gold mb-4">₹1499</p>
+
+      <p class="text-gray-400 mb-6">
+        Basic website for small businesses & gyms.
+      </p>
+
+      <ul class="text-gray-300 space-y-2 mb-6 text-sm">
+        <li>✔ 1 Page Website</li>
+        <li>✔ Mobile Friendly</li>
+        <li>✔ Fast Loading</li>
+      </ul>
+
+      <a href="https://instagram.com/webber.we" target="_blank"
+      class="btn bg-white text-black px-6 py-3 rounded-full inline-block">
+      Get Started
+      </a>
+    </div>
+
+    <!-- 3. FULL WEBSITE -->
+    <div class="card border p-8 rounded-2xl text-center fade">
+      <h2 class="text-xl mb-2">Premium Website</h2>
+      <p class="text-4xl gold mb-4">₹4999</p>
+
+      <p class="text-gray-400 mb-6">
+        Full business website with animations & lead system.
+      </p>
+
+      <ul class="text-gray-300 space-y-2 mb-6 text-sm">
+        <li>✔ Multi-page Website</li>
+        <li>✔ Contact Form</li>
+        <li>✔ Smooth Animations</li>
+        <li>✔ High Conversion Design</li>
+      </ul>
+
+      <a href="https://instagram.com/webber.we" target="_blank"
+      class="btn bg-white text-black px-6 py-3 rounded-full inline-block">
+      Get Started
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="py-24 text-center border-t border-gray-800 fade">
+  <h2 class="text-3xl luxury mb-4">Need Help Choosing?</h2>
+
+  <a href="https://instagram.com/webber.we" target="_blank"
+  class="bg-white text-black px-8 py-3 rounded-full btn">
+  DM Now
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 text-center text-gray-600 text-sm border-t border-gray-800">
+  © 2026 Webber
+</footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+  </html>
