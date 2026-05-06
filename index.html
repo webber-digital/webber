@@ -7,19 +7,15 @@
 <title>Webber | Gym Website Design India | Small Business Website Developer</title>
 
 <meta name="description" content="Webber builds high-converting gym and small business websites in India. Affordable pricing starting ₹1499.">
-<meta name="keywords" content="gym website design India, small business website India, affordable website developer India, Webber">
 
 <link rel="icon" type="image/png" href="https://webber-we.vercel.app/favicon.png?v=6">
-
-<meta property="og:title" content="Webber | Affordable Websites That Bring Clients">
-<meta property="og:description" content="We build websites that convert visitors into clients.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
 .luxury { font-family: 'Playfair Display', serif; }
 
 .gold {
@@ -28,47 +24,62 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
   -webkit-text-fill-color: transparent;
 }
 
-.fade { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.fade { opacity: 0; transform: translateY(30px); transition: 0.8s; }
 .fade.show { opacity: 1; transform: translateY(0); }
 
-/* PREMIUM BUTTONS */
-.btn-main {
-  position: relative;
-  padding: 12px 28px;
-  border-radius: 999px;
+/* FAB BUTTON */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
   background: white;
   color: black;
-  font-weight: 500;
-  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
   transition: 0.3s;
 }
-.btn-main:hover {
-  transform: scale(1.05);
-}
-.btn-main::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg,#FFD700,#D4AF37);
-  opacity: 0;
-  transition: 0.3s;
-}
-.btn-main:hover::after {
-  opacity: 0.2;
+.fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
 }
 
-.btn-outline {
-  padding: 10px 22px;
-  border-radius: 999px;
-  border: 1px solid #aaa;
-  font-size: 14px;
+/* MENU */
+.fab-menu {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
   transition: 0.3s;
 }
-.btn-outline:hover {
+
+.fab-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fab-menu a {
+  background: black;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-align: center;
+  transition: 0.3s;
+}
+.fab-menu a:hover {
   background: white;
   color: black;
-  border-color: white;
-  transform: scale(1.05);
 }
 </style>
 </head>
@@ -81,11 +92,6 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
   <div class="flex items-center gap-2">
     <img src="IMG_20260503_134348_926.webp" class="h-8" alt="Webber Logo">
     <span class="tracking-[4px] text-sm">WEBBER</span>
-  </div>
-
-  <div class="flex items-center gap-3">
-    <a href="portfolio.html" class="btn-outline">Portfolio</a>
-    <a href="https://instagram.com/webber.we" target="_blank" class="btn-main">DM</a>
   </div>
 
 </div>
@@ -103,55 +109,24 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     Webber builds affordable, high-converting websites for gyms and small businesses in India.
   </p>
 
-  <!-- BUTTON GROUP -->
-  <div class="flex flex-col items-center gap-4">
-
-    <a href="https://instagram.com/webber.we" target="_blank" class="btn-main">
-      Get Your Website
-    </a>
-
-    <div class="flex gap-4 flex-wrap justify-center">
-      <a href="portfolio.html" class="btn-outline">Portfolio</a>
-      <a href="about.html" class="btn-outline">About</a>
-    </div>
-
-  </div>
-
 </section>
 
-<!-- SEO CONTENT -->
-<section class="py-24 px-6 border-t border-gray-800 text-center fade">
-  <h2 class="text-3xl luxury mb-6">Website Developer for Gyms & Businesses</h2>
-  <p class="text-gray-400 max-w-3xl mx-auto">
-    Looking for a gym website developer in India? Webber creates affordable websites designed to convert visitors into clients.
-  </p>
-</section>
+<!-- FLOATING BUTTON -->
+<div class="fab" onclick="toggleMenu()">+</div>
 
-<!-- PRICING -->
-<section class="py-24 px-6 border-t border-gray-800 text-center fade">
-  <h2 class="text-3xl luxury mb-6">Pricing</h2>
+<!-- MENU OPTIONS -->
+<div id="menu" class="fab-menu">
+  <a href="portfolio.html">Portfolio</a>
+  <a href="service.html">Pricing</a>
+  <a href="https://instagram.com/webber.we" target="_blank">DM</a>
+</div>
 
-  <p class="text-5xl gold mb-4">Starting ₹1499</p>
-  <p class="text-gray-400 mb-8">Perfect for small businesses & gyms</p>
-
-  <a href="service.html" class="btn-outline">Show More</a>
-</section>
-
-<!-- CTA -->
-<section class="py-24 text-center border-t border-gray-800 fade">
-  <h2 class="text-3xl luxury mb-4">Need a Website?</h2>
-
-  <a href="https://instagram.com/webber.we" target="_blank" class="btn-main">
-  DM Now
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-6 text-center text-gray-600 text-sm border-t border-gray-800">
-  © 2026 Webber
-</footer>
-
+<!-- SCRIPT -->
 <script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
