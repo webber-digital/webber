@@ -6,16 +6,13 @@
 
 <title>Webber | Gym Website Design India | Small Business Website Developer</title>
 
-<meta name="description" content="Webber builds high-converting gym and small business websites in India. Affordable pricing starting ₹1499. Get more clients with a modern website.">
-<meta name="keywords" content="gym website design India, small business website India, affordable website developer India, website for gym, website for business, Webber">
-<meta name="author" content="Webber">
+<meta name="description" content="Webber builds high-converting gym and small business websites in India. Affordable pricing starting ₹1499.">
+<meta name="keywords" content="gym website design India, small business website India, affordable website developer India, Webber">
 
 <link rel="icon" type="image/png" href="https://webber-we.vercel.app/favicon.png?v=6">
 
 <meta property="og:title" content="Webber | Affordable Websites That Bring Clients">
-<meta property="og:description" content="We build websites for gyms and small businesses that convert visitors into clients. Starting ₹1499.">
-<meta property="og:image" content="https://webber-we.vercel.app/favicon.png">
-<meta property="og:url" content="https://webber-we.vercel.app/">
+<meta property="og:description" content="We build websites that convert visitors into clients.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -34,8 +31,44 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 .fade { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
 .fade.show { opacity: 1; transform: translateY(0); }
 
-.glow:hover {
-  box-shadow: 0 0 20px rgba(212,175,55,0.3);
+/* PREMIUM BUTTONS */
+.btn-main {
+  position: relative;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: white;
+  color: black;
+  font-weight: 500;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.btn-main:hover {
+  transform: scale(1.05);
+}
+.btn-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,#FFD700,#D4AF37);
+  opacity: 0;
+  transition: 0.3s;
+}
+.btn-main:hover::after {
+  opacity: 0.2;
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.btn-outline:hover {
+  background: white;
+  color: black;
+  border-color: white;
+  transform: scale(1.05);
 }
 </style>
 </head>
@@ -50,49 +83,39 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     <span class="tracking-[4px] text-sm">WEBBER</span>
   </div>
 
-  <div class="flex items-center gap-4">
-    <a href="portfolio.html"
-    class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-    Portfolio
-    </a>
-
-    <a href="https://instagram.com/webber.we" target="_blank"
-    class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-    DM
-    </a>
+  <div class="flex items-center gap-3">
+    <a href="portfolio.html" class="btn-outline">Portfolio</a>
+    <a href="https://instagram.com/webber.we" target="_blank" class="btn-main">DM</a>
   </div>
 
 </div>
 
 <!-- HERO -->
 <section class="h-screen flex flex-col justify-center items-center text-center px-6 fade">
+
   <img src="IMG_20260503_134348_926.webp" class="h-24 mb-6" alt="Webber Logo">
 
   <h1 class="text-5xl md:text-6xl luxury mb-4">
     Gym & Small Business <span class="gold">Website Developer</span>
   </h1>
 
-  <p class="text-gray-400 max-w-xl mb-6">
+  <p class="text-gray-400 max-w-xl mb-8">
     Webber builds affordable, high-converting websites for gyms and small businesses in India.
   </p>
 
-  <!-- CTA -->
-  <a href="https://instagram.com/webber.we" target="_blank"
-  class="bg-white text-black px-6 py-3 rounded-full glow transition">
-  Get Your Website
-  </a>
+  <!-- BUTTON GROUP -->
+  <div class="flex flex-col items-center gap-4">
 
-  <!-- PORTFOLIO BUTTON -->
-  <a href="portfolio.html"
-  class="mt-4 inline-block border border-white px-6 py-3 rounded-full text-sm hover:bg-white hover:text-black transition">
-  View Portfolio
-  </a>
+    <a href="https://instagram.com/webber.we" target="_blank" class="btn-main">
+      Get Your Website
+    </a>
 
-  <!-- ABOUT -->
-  <a href="about.html"
-  class="mt-4 inline-block border border-white px-6 py-3 rounded-full text-sm hover:bg-white hover:text-black transition">
-  About Founder
-  </a>
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="portfolio.html" class="btn-outline">Portfolio</a>
+      <a href="about.html" class="btn-outline">About</a>
+    </div>
+
+  </div>
 
 </section>
 
@@ -100,7 +123,7 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 <section class="py-24 px-6 border-t border-gray-800 text-center fade">
   <h2 class="text-3xl luxury mb-6">Website Developer for Gyms & Businesses</h2>
   <p class="text-gray-400 max-w-3xl mx-auto">
-    Looking for a gym website developer in India or a small business website designer? Webber creates affordable websites designed to convert visitors into clients.
+    Looking for a gym website developer in India? Webber creates affordable websites designed to convert visitors into clients.
   </p>
 </section>
 
@@ -111,29 +134,14 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
   <p class="text-5xl gold mb-4">Starting ₹1499</p>
   <p class="text-gray-400 mb-8">Perfect for small businesses & gyms</p>
 
-  <a href="service.html"
-  class="inline-block border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
-  Show More
-  </a>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="py-24 px-6 border-t border-gray-800 fade">
-  <h2 class="text-3xl text-center luxury mb-10">Client Results</h2>
-
-  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-sm">
-    <div class="border p-6 rounded-xl">“Got clients in first week itself.”<div class="mt-4 text-gray-500">— Rahul</div></div>
-    <div class="border p-6 rounded-xl">“Looks premium and smooth.”<div class="mt-4 text-gray-500">— Priya</div></div>
-    <div class="border p-6 rounded-xl">“Best investment for my business.”<div class="mt-4 text-gray-500">— Aman</div></div>
-  </div>
+  <a href="service.html" class="btn-outline">Show More</a>
 </section>
 
 <!-- CTA -->
 <section class="py-24 text-center border-t border-gray-800 fade">
   <h2 class="text-3xl luxury mb-4">Need a Website?</h2>
 
-  <a href="https://instagram.com/webber.we" target="_blank"
-  class="bg-white text-black px-8 py-3 rounded-full glow">
+  <a href="https://instagram.com/webber.we" target="_blank" class="btn-main">
   DM Now
   </a>
 </section>
